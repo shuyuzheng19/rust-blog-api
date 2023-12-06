@@ -1,0 +1,56 @@
+ip2region_path: J:\go_code\go-demo\ip2region.xdb
+my_email: shuyuzheng19@gmail.com
+blog_search_index: zmc-blogs
+origin:
+  urls: http://192.168.0.109:8080
+  methods: GET,POST,DELETE,PUT
+server:
+  addr: 0.0.0.0
+  port: 8888
+ip: &ip 192.168.25.147
+blog_page_cache: true #是否开启博客分页缓存
+blog_page_cache_expire: 2 #需要启用博客分页缓存 单位小时
+gpt:
+  token: ATBumq5IxkJwAZcnkllp1OnAkGOoiKv6MkCFjERrjbQ
+  cookie: _Secure-next-auth.apps-origin=https://chat1.zhile.io; _Secure-next-auth.session-id=E9Dv5IjRPhtmtq6hwb32w_7gUVnKan7pJSV8Gvf3fHM; cf_clearance=unkj2c.V7ZYynoz1Nv..AA_dTaZC6lTnidnbVfsLjXQ-1701086887-0-1-9aa3939b.1a87981a.cda2cc7b-0.2.1701086887; _Secure-next-auth.session-data=MTcwMTA4NzAyOXw0SEw1eFNmYVFhaEtKVDFXMldneXF1cnB5UklZa1JyZllKVWIyYkY2VC1nOXBtR04wVHZVRlZhZWZGeDZXWGRvd2Mxc1BzZGdhd1VxdGl2bk9FeUlKRkhNbHAwNGFTaTZ8AaVdsdWQvunkkL9vHWzcQ6x6GKihjPcryuoAWyrlQ7I=; _dd_s=rum=0&expire=1701088033678
+  api: https://chat1.zhile.io/backend-api/conversation
+db:
+  username: postgres
+  password: 123456
+  host: *ip
+  path: shuyu_blog
+  port: 5432
+  max_content: 10
+logger:
+  disable_error: true
+  copy_path: D:/logs
+  regex: ^/api/v1/(tags|category)/.*,^/api/v1/blog/(hots|range|latest|recommend|similar)
+  excludes:
+  log_path: controller_info.log
+redis:
+  host: *ip
+  port: 6379
+  password: xiaoyu2528959216
+  db: 0
+  max_size: 10
+  min_idle: 2
+smtp:
+  username: shuyuzheng19@163.com
+  password: ONXVXWJZQYQNOKBH
+  host: smtp.163.com
+  addr: smtp.163.com:25
+meilisearch:
+  host: http://blog.shuyuz.com:7700
+  api_key: zhengshuyuzuishuaile8889966
+token:
+  secret: asdasd8a4s8d14as!~~
+  expire: 7 #单位天
+upload:
+  avatar: avatar
+  image: image
+  files: files
+  max_image_size: 5
+  max_file_size: 300
+  prefix: static/
+  uri: https://www.shuyuz.com/static/
+  path: D:/files
