@@ -51,6 +51,6 @@ upload:
   files: files
   max_image_size: 5
   max_file_size: 300
-  prefix: static/
-  uri: https://www.shuyuz.com/static/
-  path: D:/files
+  prefix: 
+  uri: 
+  path: 
